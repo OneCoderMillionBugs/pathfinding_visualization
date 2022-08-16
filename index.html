@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
+		<title>Maze</title>
+	</head>
+
+	<body onload="main()">
+		<div class="main">
+            <div id="header">
+				<div id="dropdown" class="header-content">
+					<button id="algobtn">Algorithms</button>
+					<div id="algomenu">
+						<h5 class="dropdown-content">Depth First Search</h5>
+						<h5 class="dropdown-content">Breath First Search</h5>
+						<h5 class="dropdown-content">Dijkstra</h5>
+						<h5 class="dropdown-content">A*</h5>
+					</div>
+				</div>
+				<button class="header-content">Generate Maze</button>
+				<button class="header-content">Clear Grid</button>
+				<button class="header-content">Clear Path</button>
+				<button class="header-content" onclick="changeTool(this)">Tool: Walls</button>
+				<button id="runbtn">Run</button>
+            </div>
+
+            <div id="legend">
+
+            </div>
+
+			<div id="grid">
+				<canvas id="canvas" width="500px" height="500px"></canvas>
+			</div>
+		</div>
+	</body>
+</html>
