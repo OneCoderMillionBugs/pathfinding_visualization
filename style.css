@@ -17,7 +17,7 @@ body {
 	position: relative;
 	height: 8%;
 	width: 100%;
-	padding: 0 0 0 20%;
+	padding: 0 0 0 15%;
 	background: black;
 }
 
@@ -29,6 +29,11 @@ body {
 	background: gray;
 	border-radius: 5px;
 	border-width: 0;
+	cursor: pointer;
+}
+
+#runbtn:hover {
+	background:rgb(200, 90, 90);
 }
 
 .header-content {
@@ -40,6 +45,7 @@ body {
 	background: transparent;
 	color: white;
 	border: none;
+	cursor: pointer;
 }
 
 .header-content:hover {
@@ -50,7 +56,6 @@ body {
 	position: relative;
 	height: 6%;
 	width: 100%;
-	/* background: rgb(118, 118, 118); */
 }
 
 #grid {
@@ -63,9 +68,12 @@ body {
 	text-align: center;
 }
 
-#canvas {
-	position: relative;
+#canvas, #back_canvas {
+	position: absolute;
 	border: none;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* Dropdown algorithm selection */

@@ -11,8 +11,8 @@
 	<body onload="main()">
 
 		<div hidden>
-			<img id="start" width="40" height="40" src="src/start.svg">
-			<img id="target" width="40" height="40" src="src/target.svg">
+			<img id="start" src="src/start.svg">
+			<img id="target" src="src/target.svg">
 		</div>
 
 		<div class="main">
@@ -20,17 +20,18 @@
 				<div id="dropdown" class="header-content">
 					<button id="algobtn">Algorithms</button>
 					<div id="algomenu">
-						<h5 class="dropdown-content">Depth First Search</h5>
-						<h5 class="dropdown-content">Breath First Search</h5>
-						<h5 class="dropdown-content">Dijkstra</h5>
-						<h5 class="dropdown-content">A*</h5>
+						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">Depth First Search</h5>
+						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">Breath First Search</h5>
+						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">Dijkstra</h5>
+						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">A*</h5>
 					</div>
 				</div>
 				<button class="header-content">Generate Maze</button>
-				<button class="header-content">Clear Grid</button>
-				<button class="header-content">Clear Path</button>
+				<button class="header-content" onclick="clearCanvas()">Clear Grid</button>
+				<button class="header-content" onclick="clearPath()">Clear Path</button>
 				<button class="header-content" onclick="changeTool(this)">Tool: Walls</button>
-				<button id="runbtn">Run</button>
+				<button class="header-content" onclick="changeAnimationSpeed(this)">Speed: Medium</button>
+				<button id="runbtn" onclick="run()">Run</button>
             </div>
 
             <div id="legend">
@@ -38,6 +39,7 @@
             </div>
 
 			<div id="grid">
+				<canvas id="back_canvas" width="500px" height="500px"></canvas>
 				<canvas id="canvas" width="500px" height="500px"></canvas>
 			</div>
 		</div>
