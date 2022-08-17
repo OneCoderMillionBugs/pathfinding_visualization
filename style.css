@@ -15,6 +15,7 @@ body {
 
 #header {
 	position: relative;
+	display: flex;
 	height: 8%;
 	width: 100%;
 	padding: 0 0 0 15%;
@@ -25,6 +26,7 @@ body {
 	position: relative;
 	height: 60%;
 	width: 6%;
+	top: 20%;
 	font-size: 15px;
 	background: gray;
 	border-radius: 5px;
@@ -77,7 +79,7 @@ body {
 }
 
 /* Dropdown algorithm selection */
-#algobtn {
+#algobtn, #mazebtn {
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -87,7 +89,7 @@ body {
 	border: none;
 }
 
-#algomenu {
+.dropdown-menu {
 	display: none;
 	position: absolute;
 	background-color: rgb(235, 235, 235);
@@ -110,16 +112,62 @@ body {
 }
 
 /* Change color of dropdown links on hover */
-#algomenu .dropdown-content:hover {
+.dropdown-menu .dropdown-content:hover {
 	background-color: gray;
 }
 
 /* Show the dropdown menu on hover */
-#dropdown:hover #algomenu {
+.dropdown:hover .dropdown-menu {
 	display: block;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-#dropdown:hover #algobtn {
+.dropdown:hover #algobtn #mazebtn {
 	color: gray;
+}
+
+/* Version for smaller devices */
+@media (max-height: 480px) {
+
+	.main {
+		overflow-y: scroll;
+	}
+
+	#header {
+		height:15%;
+	}
+
+	#runbtn {
+		width: 10%;
+	}
+}
+
+@media (max-width: 900px) {
+
+	body {
+		align-content: center;
+	}
+
+	.main {
+		overflow: visible;
+		height: 150%;
+		position: absolute;
+	}
+
+	#header {
+		flex-flow: column;
+		height: 50%;
+		align-items: center;
+		padding-left: 0;
+		padding-bottom: 10px;
+	}
+
+	#runbtn {
+		top: 0;
+		width: 30%;
+	}
+
+	.header-content {
+		width: 30%
+	}
 }

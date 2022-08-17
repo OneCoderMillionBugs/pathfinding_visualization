@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="script.js"></script>
-		<title>Maze</title>
+		<title>Pathfinder</title>
 	</head>
 
 	<body onload="main()">
@@ -13,20 +13,30 @@
 		<div hidden>
 			<img id="start" src="src/start.svg">
 			<img id="target" src="src/target.svg">
+			<img id="weight" src="src/weight.svg">
 		</div>
 
 		<div class="main">
             <div id="header">
-				<div id="dropdown" class="header-content">
+				<div class="dropdown header-content">
 					<button id="algobtn">Algorithms</button>
-					<div id="algomenu">
+					<div class="dropdown-menu">
 						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">Depth First Search</h5>
 						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">Breath First Search</h5>
 						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">Dijkstra</h5>
 						<h5 class="dropdown-content" onclick="changeAlgorithm(this)">A*</h5>
 					</div>
 				</div>
-				<button class="header-content">Generate Maze</button>
+
+				<div class="dropdown header-content">
+					<button id="mazebtn">Generate Maze</button>
+					<div class="dropdown-menu">
+						<h5 class="dropdown-content" onclick="generateMaze(this)">Randomized DFS</h5>
+						<h5 class="dropdown-content" onclick="generateMaze(this)">Basic Random</h5>
+						<h5 class="dropdown-content" onclick="generateMaze(this)">Recursive Division</h5>
+					</div>
+				</div>
+
 				<button class="header-content" onclick="clearCanvas()">Clear Grid</button>
 				<button class="header-content" onclick="clearPath()">Clear Path</button>
 				<button class="header-content" onclick="changeTool(this)">Tool: Walls</button>
